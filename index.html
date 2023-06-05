@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lista de Nomes</title>
+  <script>
+    function obterNomeAleatorio() {
+      var nomes = ["Ana", "Carlos", "Pedro", "Mariana", "João", "Lúcia", "Gustavo", "Laura", "Rafael", "Camila"];
+      var indice = Math.floor(Math.random() * nomes.length);
+      return nomes[indice];
+    }
+    
+    function exibirNomeAleatorio() {
+      var nomeAleatorio = obterNomeAleatorio();
+      document.getElementById("nomeAleatorio").textContent = nomeAleatorio;
+    }
+  </script>
+</head>
+<body>
+  <h1>Nome Aleatório</h1>
+  <button onclick="exibirNomeAleatorio()">Obter Nome Aleatório</button>
+  <p>Nome Aleatório: <span id="nomeAleatorio"></span></p>
+</body>
+</html>
